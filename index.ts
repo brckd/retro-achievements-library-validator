@@ -70,7 +70,7 @@ async function matchFile({path, data}: {path: string, data: ArrayBufferLike}) {
 
 async function matchHash(data: ArrayBufferLike) {
   const hash = new Bun.CryptoHasher("md5").update(data).digest().toHex();
-  let game = games.find(v => v.hashes?.includes(hash));
+  let game = games.find(v => v.hashes?.some(v => v.toLowerCase() === hash));
   return game;
 }
 
