@@ -1,15 +1,21 @@
 # Retro Achievements Library Validator
 
-To install dependencies:
+## Installation
 
 ```bash
+git clone https://github.com/brckd/retro-achievements-library-validator
+cd retro-achievements-library-validator
 bun install
 ```
 
-To run:
+## Usage
+
+| Flag        | Type            | Value                         |
+| ----------- | --------------- | ----------------------------- |
+| `--path`    | path            | directory containing the roms |
+| `--console` | optional string | target console of the roms    |
 
 ```bash
-bun run index.ts
+bun run index.ts --path <path>
+bun run index.ts --path <path> --console <console>
 ```
-
-This project was created using `bun init` in bun v1.2.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
