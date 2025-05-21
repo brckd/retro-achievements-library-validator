@@ -1,5 +1,11 @@
 # Retro Achievements Library Validator
 
+## Features
+
+- Scans a directory for valid ROMs
+- Suggests alternative ROMs if found
+- Supports ZIP archives
+
 ## Usage
 
 Clone the project, then inside that project run:
@@ -26,3 +32,11 @@ Run the script with the following flags:
 bun run index.ts --path ...
 bun run index.ts --path ... --console ...
 ```
+
+## Logs
+
+| Prefix       | Explanation                                                                |
+| ------------ | -------------------------------------------------------------------------- |
+| `Valid:`     | The ROM was found in the Database and can be used for achievements.        |
+| `Invalid:`   | The ROM was not found in the Database and cannot be used for achievements. |
+| `Available:` | ROMs with the same title as the previous invalid ROM were found.           |
