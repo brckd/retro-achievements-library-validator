@@ -1,26 +1,26 @@
 # Retro Achievements Library Validator
 
-## Installation
+## Usage
+
+Clone the project, then inside that project run:
 
 ```bash
-git clone https://github.com/brckd/retro-achievements-library-validator
-cd retro-achievements-library-validator
 bun install
 ```
 
-## Usage
-
-Create a `.env` file in the project directory and provide your [API credentials](https://api-docs.retroachievements.org/getting-started.html#get-your-web-api-key).
+Create a `.env` file in the project directory and provide your [API credentials](https://api-docs.retroachievements.org/getting-started.html#get-your-web-api-key):
 
 ```env
 USERNAME=...
 API_KEY=...
 ```
 
-| Flag        | Type            | Value                         |
-| ----------- | --------------- | ----------------------------- |
-| `--path`    | path            | directory containing the roms |
-| `--console` | optional string | target console of the roms    |
+Run the script with the following flags:
+
+| Flag        | Type            | Value                             |
+| ----------- | --------------- | --------------------------------- |
+| `--path`    | path            | The directory containing the roms |
+| `--console` | optional string | The target console of the roms    |
 
 ```bash
 bun run index.ts --path ...
