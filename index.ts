@@ -64,7 +64,7 @@ async function matchFile({path, data}: {path: string, data: ArrayBufferLike}) {
     const hashes = await getGameHashes(authorization, { gameId: invalidGame.id });
     console.error(`Invalid: ${path}\nAvailable: ${hashes.results.map(v => v.name).join(", ")}`);
   } else {
-    console.warn(`Not found: ${path}`);
+    console.error(`Invalid: ${path}`);
   }
 }
 
