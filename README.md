@@ -26,7 +26,7 @@ Run the script with the following flags:
 | Flag        | Type            | Value                             |
 | ----------- | --------------- | --------------------------------- |
 | `--path`    | path            | The directory containing the roms |
-| `--console` | optional string | The target console of the roms    |
+| `--console` | optional string | The target console of the ROMs    |
 
 ```bash
 bun run index.ts --path ...
@@ -37,6 +37,9 @@ bun run index.ts --path ... --console ...
 
 | Prefix       | Explanation                                                                |
 | ------------ | -------------------------------------------------------------------------- |
-| `Valid:`     | The ROM was found in the Database and can be used for achievements.        |
-| `Invalid:`   | The ROM was not found in the Database and cannot be used for achievements. |
-| `Available:` | ROMs with the same title as the previous invalid ROM were found.           |
+| `Valid`     | The ROM was found in the Database and can be used for achievements.        |
+| `Invalid`   | The ROM was not found in the Database and cannot be used for achievements. |
+| `Available` | ROMs with the same title as the previous invalid ROM were found.           |
+
+> [!WARNING]  
+> Validating unsupported systems or file formats will result in false negatives! Always consult the RetroAchievements website for `Invalid` ROMs.
